@@ -1,6 +1,6 @@
 <?php
 
-  get_header();	?>
+  get_header(); ?>
 
   <div class="container"> <?php
 
@@ -9,9 +9,9 @@
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h2 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	</h2>
+  <h2 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
   <h5>Geplaatst door: <a href="<?php get_the_author_link(); ?>"><?php the_author(); ?></a></h5>
-	<p><?php the_content(); ?></p>
+  <p><?php the_content(); ?></p>
     
   </article>  
     <?php  endwhile;

@@ -18,28 +18,22 @@
 	    <div class="header--logo">
 	      <h1><a href="<?php echo home_url(); ?>">ATTC '77</a></h1>
 	    </div>
-	    <div class="menu">
+	    <div class="menu-resp">
 	      Menu<i class="fa fa-reorder fa-1x"></i>
 	    </div>
 	    <nav>
-	      <ul>
-	        <li>
+	<!--         <li>
 	          <a class="header__links" href="#">Home</a>
 	        </li>
-	        <li>
-	          <a class="header__links" href="views/competitie.html">Competitie</a>
-	        </li>
-	        <li>
-	          <a class="header__links" href="views/fotos.html">Foto's</a>
-	        </li>
-	        <li>
-	          <a class="header__links" href="views/algemene-informatie.html">Algemene informatie</a>
-	        </li>
-	        <li>
-	          <a class="header__links" href="views/gastenboek.html">Gastenboek</a>
-	        </li>
-	      </ul>
+ -->
+			<?php 
+
+			$args = array(
+				'theme_location' => 'primary'
+				);
+			?>
+
+ 			<?php wp_nav_menu( $args ); ?>
 	    </nav>
 
 	  </header>
-	  <div class="container">

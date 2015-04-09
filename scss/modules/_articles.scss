@@ -16,14 +16,11 @@
     width: 98%;
   }      
 }
-.news {
+.post {
   border: $border-default;
   background: $bgcolor-light;
   padding: 0 3.5% 1.5%;
-  display: none;
-  &.active {
-    display: block;
-  }
+  margin-bottom: 3%;
   &__title {
     font-size: 2em;
     line-height: 1;
@@ -53,3 +50,9 @@
 }
 
 
+.sticky {
+  background: yellow;
+  &:first-child {
+    margin-top: 3%;
+  }
+}
