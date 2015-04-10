@@ -1827,11 +1827,39 @@ nav ul li.last {
 
 /* line 53, scss/modules/_articles.scss */
 .sticky {
-  background: yellow;
+  background: #a0cdff;
+  border: 1px solid red;
 }
-/* line 55, scss/modules/_articles.scss */
+/* line 56, scss/modules/_articles.scss */
 .sticky:first-child {
   margin-top: 3%;
+}
+/* line 59, scss/modules/_articles.scss */
+.sticky .news__title a:link, .sticky .news__title a:visited {
+  color: red !important;
+}
+
+/* line 64, scss/modules/_articles.scss */
+.post-info {
+  margin-top: 0;
+  font-style: italic;
+  font-size: 80%;
+  color: #606d71;
+}
+/* line 69, scss/modules/_articles.scss */
+.post-info a:visited, .post-info a:link {
+  color: #2165c0;
+}
+
+/* line 74, scss/modules/_articles.scss */
+.post .news__title {
+  margin-bottom: 0.5%;
+}
+/* line 76, scss/modules/_articles.scss */
+.post .news__title a:link, .post .news__title a:visited {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-size: 125%;
 }
 
 /* line 1, scss/modules/_flipsides.scss */
@@ -1908,7 +1936,7 @@ footer {
   color: #0b0b0b;
   letter-spacing: 0.03em;
   background: rgba(91, 119, 136, 0.2);
-  margin-top: 2.5%;
+  margin-top: 0;
 }
 /* line 14, scss/modules/_footer.scss */
 footer h5 {
