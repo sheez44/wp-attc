@@ -21,6 +21,9 @@
   background: $bgcolor-light;
   padding: 0 3.5% 1.5%;
   margin-bottom: 3%;
+  a {
+    color: rgb(33, 101, 192);
+  }
   &__title {
     font-size: 2em;
     line-height: 1;

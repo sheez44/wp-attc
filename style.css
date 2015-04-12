@@ -990,6 +990,21 @@ body {
   padding: 1% 2%;
 }
 
+/* line 293, scss/_main.scss */
+.archive-title {
+  color: #fcfdf2;
+  font-size: 150%;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMmQ0YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFiMjIyNSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -moz-radial-gradient(center, #002d4a, #1b2225);
+  background: -webkit-radial-gradient(center, #002d4a, #1b2225);
+  background: radial-gradient(center, #002d4a, #1b2225);
+  padding: 20px 0;
+  border: 1px solid white;
+  margin: 1% auto 2%;
+  width: 75%;
+  text-align: center;
+}
+
 /* line 5, scss/modules/_header.scss */
 header {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMmQ0YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFiMjIyNSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -1768,34 +1783,38 @@ nav ul li.last {
   margin-bottom: 3%;
 }
 /* line 24, scss/modules/_articles.scss */
+.post a {
+  color: #2165c0;
+}
+/* line 27, scss/modules/_articles.scss */
 .post__title {
   font-size: 2em;
   line-height: 1;
 }
-/* line 28, scss/modules/_articles.scss */
+/* line 31, scss/modules/_articles.scss */
 .post__image {
   padding-left: 12px;
   padding-bottom: 10px;
   float: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 28, scss/modules/_articles.scss */
+  /* line 31, scss/modules/_articles.scss */
   .post__image {
     display: none;
   }
 }
 @media screen and (max-width: md) {
-  /* line 28, scss/modules/_articles.scss */
+  /* line 31, scss/modules/_articles.scss */
   .post__image {
     display: none;
   }
 }
-/* line 36, scss/modules/_articles.scss */
+/* line 39, scss/modules/_articles.scss */
 .post--warning {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 36, scss/modules/_articles.scss */
+  /* line 39, scss/modules/_articles.scss */
   .post--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
@@ -1804,13 +1823,13 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 45, scss/modules/_articles.scss */
+  /* line 48, scss/modules/_articles.scss */
   .post--warning p {
     margin: 0;
   }
 }
 @media screen and (max-width: md) {
-  /* line 36, scss/modules/_articles.scss */
+  /* line 39, scss/modules/_articles.scss */
   .post--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
@@ -1819,43 +1838,43 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 45, scss/modules/_articles.scss */
+  /* line 48, scss/modules/_articles.scss */
   .post--warning p {
     margin: 0;
   }
 }
 
-/* line 53, scss/modules/_articles.scss */
+/* line 56, scss/modules/_articles.scss */
 .sticky {
   background: #a0cdff;
   border: 1px solid red;
 }
-/* line 56, scss/modules/_articles.scss */
+/* line 59, scss/modules/_articles.scss */
 .sticky:first-child {
   margin-top: 3%;
 }
-/* line 59, scss/modules/_articles.scss */
+/* line 62, scss/modules/_articles.scss */
 .sticky .news__title a:link, .sticky .news__title a:visited {
   color: red !important;
 }
 
-/* line 64, scss/modules/_articles.scss */
+/* line 67, scss/modules/_articles.scss */
 .post-info {
   margin-top: 0;
   font-style: italic;
   font-size: 80%;
   color: #606d71;
 }
-/* line 69, scss/modules/_articles.scss */
+/* line 72, scss/modules/_articles.scss */
 .post-info a:visited, .post-info a:link {
   color: #2165c0;
 }
 
-/* line 74, scss/modules/_articles.scss */
+/* line 77, scss/modules/_articles.scss */
 .post .news__title {
   margin-bottom: 0.5%;
 }
-/* line 76, scss/modules/_articles.scss */
+/* line 79, scss/modules/_articles.scss */
 .post .news__title a:link, .post .news__title a:visited {
   color: #0b0b0b;
   text-decoration: none;
@@ -1941,6 +1960,7 @@ footer {
 /* line 14, scss/modules/_footer.scss */
 footer h5 {
   margin: 0;
+  font-size: 90%;
 }
 
 /* line 5, scss/modules/_tables.scss */

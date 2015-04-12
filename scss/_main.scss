@@ -289,3 +289,14 @@ body {
 	border-top: $border-default;
 	padding: 1% 2%;
 }
+
+.archive-title {
+	color: $white;
+	font-size: 150%;
+	@include background(radial-gradient(center, rgba(darken($sps-blue, 30%), 1), #1b2225));
+	padding: 20px 0;
+	border: 1px solid white;
+	margin: 1% auto 2%;
+	width: 75%;
+	text-align: center;
+}
