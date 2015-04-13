@@ -4,7 +4,11 @@
 
   <div class="container"> <?php
 
-  if (have_posts() ) :
+  if (have_posts() ) : ?>
+
+    <h2>Zoekresultaten voor: <?php the_search_query(); ?></h2>
+
+  <?php
     while (have_posts() ) : the_post(); ?>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -33,15 +37,8 @@
 
   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fp-img'); ?></a>
 
-  <?php if($post->post_exerpt) { ?>
-      <p><?php echo get_the_excerpt(); ?>
-  <a href="<?php the_permalink(); ?>">Lees meer&raquo;</a>
-
-  </p>
-    <?php
-  } else {
-    the_content();
-  }
+  <?php 
+    the_excerpt();
  ?>
   </article>  
     <?php  endwhile;

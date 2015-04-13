@@ -71,13 +71,20 @@ Version: 1.0
   color: #0b0b0b;
 }
 
-/* line 80, scss/_helpers.scss */
-.aside__sponsors img {
+/* line 79, scss/_helpers.scss */
+.post .wp-post-image, .aside__sponsors {
   max-width: 100%;
   height: auto;
 }
 
-/* line 86, scss/_helpers.scss */
+/* line 84, scss/_helpers.scss */
+.post .wp-post-image {
+  float: right;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+/* line 92, scss/_helpers.scss */
 .btn-default a {
   position: relative;
   top: 50%;
@@ -90,12 +97,12 @@ Version: 1.0
 /***********************
  *  Helper classes
  **********************/
-/* line 95, scss/_helpers.scss */
+/* line 101, scss/_helpers.scss */
 .clear {
   clear: both;
 }
 
-/* line 99, scss/_helpers.scss */
+/* line 105, scss/_helpers.scss */
 .views-title {
   text-align: center;
   font-size: 3.2em;
@@ -103,7 +110,7 @@ Version: 1.0
   line-height: 0.75em;
 }
 @media screen and (max-width: 480px) {
-  /* line 99, scss/_helpers.scss */
+  /* line 105, scss/_helpers.scss */
   .views-title {
     font-size: 2.2em;
     line-height: 2.18182em;
@@ -111,7 +118,7 @@ Version: 1.0
   }
 }
 @media screen and (max-width: sm) {
-  /* line 99, scss/_helpers.scss */
+  /* line 105, scss/_helpers.scss */
   .views-title {
     font-size: 2.2em;
     line-height: 2.18182em;
@@ -119,7 +126,7 @@ Version: 1.0
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 99, scss/_helpers.scss */
+  /* line 105, scss/_helpers.scss */
   .views-title {
     font-size: 1.5em;
     line-height: 1.6em;
@@ -127,7 +134,7 @@ Version: 1.0
   }
 }
 @media screen and (max-width: xs) {
-  /* line 99, scss/_helpers.scss */
+  /* line 105, scss/_helpers.scss */
   .views-title {
     font-size: 1.5em;
     line-height: 1.6em;
@@ -135,28 +142,28 @@ Version: 1.0
   }
 }
 
-/* line 113, scss/_helpers.scss */
+/* line 119, scss/_helpers.scss */
 .maxHeight {
   height: 100% !important;
 }
 
-/* line 117, scss/_helpers.scss */
+/* line 123, scss/_helpers.scss */
 .menuHeight {
   height: 100%;
   padding-bottom: 2%;
 }
 
-/* line 122, scss/_helpers.scss */
+/* line 128, scss/_helpers.scss */
 .hidden {
   display: none;
 }
 
-/* line 126, scss/_helpers.scss */
+/* line 132, scss/_helpers.scss */
 .img-responsive {
   max-width: 100%;
 }
 
-/* line 130, scss/_helpers.scss */
+/* line 136, scss/_helpers.scss */
 .under_construction {
   background: url('img/Site-under-construction.gif?1419793294');
   width: 800px;
@@ -164,12 +171,12 @@ Version: 1.0
   margin: 3em auto;
 }
 
-/* line 137, scss/_helpers.scss */
+/* line 143, scss/_helpers.scss */
 .mute-link {
   text-decoration: none;
   color: inherit;
 }
-/* line 140, scss/_helpers.scss */
+/* line 146, scss/_helpers.scss */
 .mute-link:hover {
   color: #008BE3;
 }
@@ -1792,29 +1799,27 @@ nav ul li.last {
   line-height: 1;
 }
 /* line 31, scss/modules/_articles.scss */
-.post__image {
-  padding-left: 12px;
-  padding-bottom: 10px;
+.post .wp-post-image {
   float: right;
 }
 @media screen and (max-width: 768px) {
   /* line 31, scss/modules/_articles.scss */
-  .post__image {
+  .post .wp-post-image {
     display: none;
   }
 }
 @media screen and (max-width: md) {
   /* line 31, scss/modules/_articles.scss */
-  .post__image {
+  .post .wp-post-image {
     display: none;
   }
 }
-/* line 39, scss/modules/_articles.scss */
+/* line 38, scss/modules/_articles.scss */
 .post--warning {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 39, scss/modules/_articles.scss */
+  /* line 38, scss/modules/_articles.scss */
   .post--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
@@ -1823,13 +1828,13 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 48, scss/modules/_articles.scss */
+  /* line 47, scss/modules/_articles.scss */
   .post--warning p {
     margin: 0;
   }
 }
 @media screen and (max-width: md) {
-  /* line 39, scss/modules/_articles.scss */
+  /* line 38, scss/modules/_articles.scss */
   .post--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
@@ -1838,47 +1843,52 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 48, scss/modules/_articles.scss */
+  /* line 47, scss/modules/_articles.scss */
   .post--warning p {
     margin: 0;
   }
 }
 
-/* line 56, scss/modules/_articles.scss */
+/* line 55, scss/modules/_articles.scss */
 .sticky {
   background: #a0cdff;
   border: 1px solid red;
 }
-/* line 59, scss/modules/_articles.scss */
+/* line 58, scss/modules/_articles.scss */
 .sticky:first-child {
   margin-top: 3%;
 }
-/* line 62, scss/modules/_articles.scss */
+/* line 61, scss/modules/_articles.scss */
 .sticky .news__title a:link, .sticky .news__title a:visited {
   color: red !important;
 }
 
-/* line 67, scss/modules/_articles.scss */
+/* line 66, scss/modules/_articles.scss */
 .post-info {
   margin-top: 0;
   font-style: italic;
   font-size: 80%;
   color: #606d71;
 }
-/* line 72, scss/modules/_articles.scss */
+/* line 71, scss/modules/_articles.scss */
 .post-info a:visited, .post-info a:link {
   color: #2165c0;
 }
 
-/* line 77, scss/modules/_articles.scss */
+/* line 76, scss/modules/_articles.scss */
 .post .news__title {
   margin-bottom: 0.5%;
 }
-/* line 79, scss/modules/_articles.scss */
+/* line 78, scss/modules/_articles.scss */
 .post .news__title a:link, .post .news__title a:visited {
   color: #0b0b0b;
   text-decoration: none;
   font-size: 125%;
+}
+
+/* line 85, scss/modules/_articles.scss */
+.single-post .post {
+  margin: 3% 0 0;
 }
 
 /* line 1, scss/modules/_flipsides.scss */

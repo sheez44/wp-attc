@@ -28,9 +28,8 @@
     font-size: 2em;
     line-height: 1;
   }
-  &__image {
-  	@include padding(left, 12px);
-  	@include padding(bottom, 10px);
+  .wp-post-image {
+    @extend %blog-img;
   	float: right;
     @include responsive(md) {
       display: none;
@@ -81,4 +80,8 @@
     text-decoration: none;
     font-size: 125%;
   }
+}
+
+.single-post .post {
+  margin: 3% 0 0;
 }

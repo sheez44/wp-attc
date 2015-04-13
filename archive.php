@@ -52,7 +52,7 @@
     ?>
   </h5>
 
-	<p><?php the_excerpt('Lees het hele bericht'); ?></p>
+	<p><?php the_excerpt(); ?></p>
     
   </article>  
     <?php  endwhile;
