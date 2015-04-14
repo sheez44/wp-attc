@@ -6,7 +6,7 @@ Version: 1.0
 */
 @import url("http://fonts.googleapis.com/css?family=Bitter:400,700,400italic");
 /* line 8, scss/_helpers.scss */
-.container:after, .bottom--container:after, .contact:after, .locatie:after, header:after, .aside:after, .news-tabs:after, .wrapper:after {
+.container:after, .bottom--container:after, .contact:after, .locatie:after, header:after, .aside:after, .news-tabs:after, .post:after, .type-page:after, .type-portfolio:after, .wrapper:after {
   content: "";
   display: table;
   clear: both;
@@ -72,13 +72,13 @@ Version: 1.0
 }
 
 /* line 79, scss/_helpers.scss */
-.post .wp-post-image, .aside__sponsors {
+.post .wp-post-image, .type-page .wp-post-image, .type-portfolio .wp-post-image, .aside__sponsors {
   max-width: 100%;
   height: auto;
 }
 
 /* line 84, scss/_helpers.scss */
-.post .wp-post-image {
+.post .wp-post-image, .type-page .wp-post-image, .type-portfolio .wp-post-image {
   float: right;
   margin-left: 25px;
   margin-bottom: 25px;
@@ -1783,44 +1783,54 @@ nav ul li.last {
 }
 
 /* line 19, scss/modules/_articles.scss */
-.post {
+.post, .type-page, .type-portfolio {
   border: 1px solid #fcfdf2;
   background: #82cfff;
   padding: 0 3.5% 1.5%;
   margin-bottom: 3%;
 }
-/* line 24, scss/modules/_articles.scss */
-.post a {
+/* line 25, scss/modules/_articles.scss */
+.post a, .type-page a, .type-portfolio a {
   color: #2165c0;
 }
-/* line 27, scss/modules/_articles.scss */
-.post__title {
+/* line 28, scss/modules/_articles.scss */
+.post__title, .type-page__title, .type-portfolio__title {
   font-size: 2em;
   line-height: 1;
 }
-/* line 31, scss/modules/_articles.scss */
-.post .wp-post-image {
+/* line 32, scss/modules/_articles.scss */
+.post .wp-post-image, .type-page .wp-post-image, .type-portfolio .wp-post-image {
   float: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 31, scss/modules/_articles.scss */
-  .post .wp-post-image {
+  /* line 32, scss/modules/_articles.scss */
+  .post .wp-post-image, .type-page .wp-post-image, .type-portfolio .wp-post-image {
     display: none;
   }
 }
 @media screen and (max-width: md) {
-  /* line 31, scss/modules/_articles.scss */
-  .post .wp-post-image {
+  /* line 32, scss/modules/_articles.scss */
+  .post .wp-post-image, .type-page .wp-post-image, .type-portfolio .wp-post-image {
     display: none;
   }
 }
-/* line 38, scss/modules/_articles.scss */
-.post--warning {
+/* line 39, scss/modules/_articles.scss */
+.post .news__title, .type-page .news__title, .type-portfolio .news__title {
+  margin-bottom: 0.5%;
+}
+/* line 41, scss/modules/_articles.scss */
+.post .news__title a:link, .post .news__title a:visited, .type-page .news__title a:link, .type-page .news__title a:visited, .type-portfolio .news__title a:link, .type-portfolio .news__title a:visited {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-size: 125%;
+}
+/* line 47, scss/modules/_articles.scss */
+.post--warning, .type-page--warning, .type-portfolio--warning {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 38, scss/modules/_articles.scss */
-  .post--warning {
+  /* line 47, scss/modules/_articles.scss */
+  .post--warning, .type-page--warning, .type-portfolio--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
     right: 0;
@@ -1828,14 +1838,14 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 47, scss/modules/_articles.scss */
-  .post--warning p {
+  /* line 56, scss/modules/_articles.scss */
+  .post--warning p, .type-page--warning p, .type-portfolio--warning p {
     margin: 0;
   }
 }
 @media screen and (max-width: md) {
-  /* line 38, scss/modules/_articles.scss */
-  .post--warning {
+  /* line 47, scss/modules/_articles.scss */
+  .post--warning, .type-page--warning, .type-portfolio--warning {
     background: rgba(114, 114, 114, 0.9);
     position: absolute;
     right: 0;
@@ -1843,47 +1853,36 @@ nav ul li.last {
     bottom: 0;
     padding: 5px;
   }
-  /* line 47, scss/modules/_articles.scss */
-  .post--warning p {
+  /* line 56, scss/modules/_articles.scss */
+  .post--warning p, .type-page--warning p, .type-portfolio--warning p {
     margin: 0;
   }
 }
 
-/* line 55, scss/modules/_articles.scss */
+/* line 64, scss/modules/_articles.scss */
 .sticky {
   background: #a0cdff;
   border: 1px solid red;
 }
-/* line 58, scss/modules/_articles.scss */
+/* line 67, scss/modules/_articles.scss */
 .sticky:first-child {
   margin-top: 3%;
 }
-/* line 61, scss/modules/_articles.scss */
+/* line 70, scss/modules/_articles.scss */
 .sticky .news__title a:link, .sticky .news__title a:visited {
   color: red !important;
 }
 
-/* line 66, scss/modules/_articles.scss */
+/* line 75, scss/modules/_articles.scss */
 .post-info {
   margin-top: 0;
   font-style: italic;
   font-size: 80%;
   color: #606d71;
 }
-/* line 71, scss/modules/_articles.scss */
+/* line 80, scss/modules/_articles.scss */
 .post-info a:visited, .post-info a:link {
   color: #2165c0;
-}
-
-/* line 76, scss/modules/_articles.scss */
-.post .news__title {
-  margin-bottom: 0.5%;
-}
-/* line 78, scss/modules/_articles.scss */
-.post .news__title a:link, .post .news__title a:visited {
-  color: #0b0b0b;
-  text-decoration: none;
-  font-size: 125%;
 }
 
 /* line 85, scss/modules/_articles.scss */

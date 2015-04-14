@@ -16,11 +16,12 @@
     width: 98%;
   }      
 }
-.post {
+.post, .type-page, .type-portfolio {
   border: $border-default;
   background: $bgcolor-light;
   padding: 0 3.5% 1.5%;
   margin-bottom: 3%;
+  @extend %clearfix;
   a {
     color: rgb(33, 101, 192);
   }
@@ -33,6 +34,14 @@
   	float: right;
     @include responsive(md) {
       display: none;
+    }
+  }
+  .news__title {
+    margin-bottom: 0.5%;
+    a:link, a:visited {
+      color: $black;
+      text-decoration: none;
+      font-size: 125%;
     }
   }
   &--warning {
@@ -70,15 +79,6 @@
   color: rgb(96, 109, 113);
   a:visited, a:link {
     color: rgb(33, 101, 192);
-  }
-}
-
-.post .news__title {
-  margin-bottom: 0.5%;
-  a:link, a:visited {
-    color: $black;
-    text-decoration: none;
-    font-size: 125%;
   }
 }
 
