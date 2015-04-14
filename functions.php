@@ -32,6 +32,9 @@ function attc_wp_setup() {
 	add_theme_support('post-thumbnails');
 	add_image_size('fp-img', 1000, 'auto', true); // true is crop to fit the w/h
 	add_image_size('single-blog-image', 920, 'auto', true);
+
+	// Add post format support
+	add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 }
 
 add_action('after_setup_theme', 'attc_wp_setup');

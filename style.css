@@ -1890,6 +1890,35 @@ nav ul li.last {
   margin: 3% 0 0;
 }
 
+/* line 89, scss/modules/_articles.scss */
+article.post-aside, article.post-link {
+  font-size: 125%;
+  background: #fff5cb;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 97, scss/modules/_articles.scss */
+.mini-meta {
+  font-size: 68%;
+  margin: 0;
+  color: #777;
+  text-align: right;
+}
+
+/* line 104, scss/modules/_articles.scss */
+article.post-link {
+  padding: 0;
+  background: #9BECA9;
+}
+
+/* line 109, scss/modules/_articles.scss */
+article.post-link a {
+  display: block;
+  padding: 20px;
+}
+
 /* line 1, scss/modules/_flipsides.scss */
 .flip-container {
   -moz-perspective: 1000;
