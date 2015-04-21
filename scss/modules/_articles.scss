@@ -64,9 +64,6 @@
 .sticky {
   background: rgb(160, 205, 255);
   border: 1px solid red;
-  &:first-child {
-    margin-top: 3%;
-  }
   .news__title a:link, .news__title a:visited {
     color: red !important;
   }

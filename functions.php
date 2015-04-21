@@ -38,3 +38,23 @@ function attc_wp_setup() {
 }
 
 add_action('after_setup_theme', 'attc_wp_setup');
+
+function ourWidgetsInit() {
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>'
+		));
+}
+
+add_action('widgets_init', 'ourWidgetsInit');
+
+
+// how many months to display in the archive sidebar
+function my_limit_archives( $args ) {
+    $args['limit'] = 12;
+    return $args;
+}
+add_filter( 'widget_archives_args', 'my_limit_archives' );
+add_filter( 'widget_archives_dropdown_args', 'my_limit_archives' );
