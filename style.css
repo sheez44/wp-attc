@@ -1094,7 +1094,7 @@ header .header--logo h1 a:link:hover, header .header--logo h1 a:visited:hover {
 
 /* line 50, scss/modules/_header.scss */
 .header--background {
-  background: url("../img/main--bg.JPG") 112% 63% no-repeat;
+  background: url("./img/main--bg.JPG") 112% 63% no-repeat;
   background-size: 100%;
   min-width: 100%;
   height: 350px;
@@ -1245,7 +1245,6 @@ header .header--logo h1 a:link:hover, header .header--logo h1 a:visited:hover {
 nav {
   float: right;
   font-size: 1.3rem;
-  margin-bottom: 3%;
 }
 @media screen and (max-width: 1150px) {
   /* line 8, scss/modules/_nav.scss */
@@ -1259,7 +1258,7 @@ nav {
     display: none;
   }
 }
-/* line 18, scss/modules/_nav.scss */
+/* line 17, scss/modules/_nav.scss */
 nav ul {
   margin: 0;
   padding: 0;
@@ -1290,53 +1289,53 @@ nav ul li.last {
   padding-right: 0;
 }
 @media screen and (max-width: 1150px) {
-  /* line 18, scss/modules/_nav.scss */
+  /* line 17, scss/modules/_nav.scss */
   nav ul {
     margin-top: -0.8em;
   }
 }
 @media screen and (max-width: 1150px) {
-  /* line 23, scss/modules/_nav.scss */
+  /* line 22, scss/modules/_nav.scss */
   nav ul li {
     float: none;
     display: inline-block;
   }
 }
 @media screen and (max-width: 780px) {
-  /* line 23, scss/modules/_nav.scss */
+  /* line 22, scss/modules/_nav.scss */
   nav ul li {
     display: block;
     line-height: 2em;
   }
-  /* line 31, scss/modules/_nav.scss */
+  /* line 30, scss/modules/_nav.scss */
   nav ul li:hover a {
     color: tomato;
     text-decoration: none;
   }
-  /* line 35, scss/modules/_nav.scss */
+  /* line 34, scss/modules/_nav.scss */
   nav ul li:hover {
     background: rgba(255, 255, 255, 0.1);
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 40, scss/modules/_nav.scss */
+  /* line 39, scss/modules/_nav.scss */
   nav ul li:first-child {
     margin-top: 0.5em;
   }
 }
 @media screen and (max-width: sm) {
-  /* line 40, scss/modules/_nav.scss */
+  /* line 39, scss/modules/_nav.scss */
   nav ul li:first-child {
     margin-top: 0.5em;
   }
 }
 
-/* line 49, scss/modules/_nav.scss */
+/* line 48, scss/modules/_nav.scss */
 .menu-resp {
   display: none;
 }
 @media screen and (max-width: 780px) {
-  /* line 49, scss/modules/_nav.scss */
+  /* line 48, scss/modules/_nav.scss */
   .menu-resp {
     display: block;
     color: #008BE3;
@@ -1344,17 +1343,17 @@ nav ul li.last {
     font-size: 1.5em;
     margin-bottom: 3%;
   }
-  /* line 57, scss/modules/_nav.scss */
+  /* line 56, scss/modules/_nav.scss */
   .menu-resp:hover {
     color: #fcfdf2;
   }
 }
-/* line 61, scss/modules/_nav.scss */
+/* line 60, scss/modules/_nav.scss */
 .menu-resp i {
   padding-left: 0.5em;
 }
 
-/* line 66, scss/modules/_nav.scss */
+/* line 65, scss/modules/_nav.scss */
 .menu-attc-nav-container ul li a {
   text-decoration: none;
   color: #008BE3;
@@ -1362,18 +1361,18 @@ nav ul li.last {
   text-shadow: 3px 3px 1px #000e17;
 }
 @media screen and (max-width: 780px) {
-  /* line 66, scss/modules/_nav.scss */
+  /* line 65, scss/modules/_nav.scss */
   .menu-attc-nav-container ul li a {
     color: #fcfdf2;
   }
 }
-/* line 74, scss/modules/_nav.scss */
+/* line 73, scss/modules/_nav.scss */
 .menu-attc-nav-container ul li a:hover {
   color: #fcfdf2;
   text-decoration: underline;
 }
 @media screen and (max-width: 780px) {
-  /* line 74, scss/modules/_nav.scss */
+  /* line 73, scss/modules/_nav.scss */
   .menu-attc-nav-container ul li a:hover {
     color: tomato;
     text-underline: none !important;

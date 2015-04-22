@@ -46,6 +46,11 @@ function ourWidgetsInit() {
 		'before_widget' => '<div class="widget-item">',
 		'after_widget' => '</div>'
 		));
+
+	register_sidebar( array(
+			'name' => 'tabs',
+			'id' => 'tabs',
+			));
 }
 
 add_action('widgets_init', 'ourWidgetsInit');

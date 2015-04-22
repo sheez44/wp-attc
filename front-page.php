@@ -1,8 +1,38 @@
 <?php
 
   get_header();	?>
+  <div class="header--background"></div>
+  
+  <h1 class="welcome--info">Welkom op de website van ATTC '77</h1>
 
+      <?php
+// get sticky posts from DB
+$sticky = get_option('sticky_posts');
+// check if there are any
+if (!empty($sticky)) {
+    // optional: sort the newest IDs first
+    rsort($sticky);
+    // override the query
+    $args = array(
+        'posts_per_page' => 1,
+        'post__in' => $sticky,
+
+    );
+    query_posts($args);
+    // the loop
+    while (have_posts()) {
+         the_post();
+         // your code
+         get_template_part('content', get_post_format() );  
+    }
+}
+// https://codex.wordpress.org/Sticky_Posts
+      ?>   
+
+  <!-- END OF TOP SECTION -->
+  <h2 class="news__header">Laatste nieuws:</h2>
   <div class="container"> 
+
     <?php
 
       if (have_posts() ) :
@@ -15,12 +45,12 @@
 
       // custom loop starts here
 
-      $tabNews = new WP_Query('cat=tutorials&posts_per_page=3&ignore_sticky_posts=true');
+      $tabNews = new WP_Query('category_name=nieuws&posts_per_page=3&ignore_sticky_posts=true');
 
       if ($tabNews->have_posts() ) :
-        while ($tabNews->have_posts() ) : $tabNews->the_post(); ?>
-        <h2><?php the_title();?> </h2>
-        <?php
+        while ($tabNews->have_posts() ) : $tabNews->the_post(); 
+        get_template_part('content', get_post_format() );  
+
         endwhile;
 
         else : 

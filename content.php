@@ -24,7 +24,7 @@
 
    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fp-img'); ?></a>
 
-  <?php if( is_search() || is_archive() ) { ?>
+  <?php if( is_search() || is_archive() || is_front_page() ) { ?>
     <p><?php echo get_the_excerpt(); ?>
   <a href="<?php the_permalink(); ?>">Lees meer&raquo;</a>
 
