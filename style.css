@@ -1200,7 +1200,7 @@ header .header--logo h1 a:link:hover, header .header--logo h1 a:visited:hover {
   color: #fcfdf2;
   padding-left: 14%;
   font-size: 2em;
-  margin-top: -1.7em;
+  margin-top: 0em;
 }
 @media screen and (max-width: 768px) {
   /* line 96, scss/modules/_header.scss */
@@ -1870,23 +1870,30 @@ nav ul li.last {
 }
 
 /* line 72, scss/modules/_articles.scss */
+.post.sticky {
+  margin-left: 3%;
+  margin-top: -2.7em;
+  width: 94%;
+}
+
+/* line 78, scss/modules/_articles.scss */
 .post-info {
   margin-top: 0;
   font-style: italic;
   font-size: 80%;
   color: #606d71;
 }
-/* line 77, scss/modules/_articles.scss */
+/* line 83, scss/modules/_articles.scss */
 .post-info a:visited, .post-info a:link {
   color: #2165c0;
 }
 
-/* line 82, scss/modules/_articles.scss */
+/* line 88, scss/modules/_articles.scss */
 .single-post .post {
   margin: 3% 0 0;
 }
 
-/* line 86, scss/modules/_articles.scss */
+/* line 92, scss/modules/_articles.scss */
 article.post-aside, article.post-link {
   font-size: 125%;
   background: #fff5cb;
@@ -1895,7 +1902,7 @@ article.post-aside, article.post-link {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* line 94, scss/modules/_articles.scss */
+/* line 100, scss/modules/_articles.scss */
 .mini-meta {
   font-size: 68%;
   margin: 0;
@@ -1903,13 +1910,13 @@ article.post-aside, article.post-link {
   text-align: right;
 }
 
-/* line 101, scss/modules/_articles.scss */
+/* line 107, scss/modules/_articles.scss */
 article.post-link {
   padding: 0;
   background: #9BECA9;
 }
 
-/* line 106, scss/modules/_articles.scss */
+/* line 112, scss/modules/_articles.scss */
 article.post-link a {
   display: block;
   padding: 20px;

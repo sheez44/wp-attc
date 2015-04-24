@@ -16,6 +16,7 @@ if (!empty($sticky)) {
     $args = array(
         'posts_per_page' => 1,
         'post__in' => $sticky,
+        'ignore_sticky_posts' => 1
 
     );
     query_posts($args);

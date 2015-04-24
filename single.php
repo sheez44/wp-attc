@@ -1,47 +1,55 @@
 <?php
+  get_header();	
+?>
+  <div class="container"> 
+    <?php
 
-  get_header();	?>
+    if (have_posts() ) :
+      while (have_posts() ) : the_post(); ?>
 
-  <div class="container"> <?php
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  if (have_posts() ) :
-    while (have_posts() ) : the_post(); ?>
+  	<h2 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	</h2>
+    <h5 class="post-info">Geplaatst door: <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a> op <?php the_time('j F Y'); ?>   |
+      <?php 
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      $categories = get_the_category();
+      $seperator = ", ";
+      $output = '';
 
-	<h2 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	</h2>
-  <h5 class="post-info">Geplaatst door: <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a> op <?php the_time('j F Y'); ?>   |
-    <?php 
+      if($categories) {
 
-    $categories = get_the_category();
-    $seperator = ", ";
-    $output = '';
+        foreach($categories as $category) {
+          $output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>' . $seperator;
+        }
 
-    if($categories) {
-
-      foreach($categories as $category) {
-        $output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>' . $seperator;
+        echo trim($output, $seperator);
       }
 
-      echo trim($output, $seperator);
-    }
+      ?>
+    </h5>
 
-    ?>
-  </h5>
+    <?php the_post_thumbnail('single-blog-image') ?>
+    
 
-  <?php the_post_thumbnail('single-blog-image') ?>
+  	<p><?php the_content(); ?></p>
+      
+    </article>  
+      
+      <?php  endwhile;
+      else : 
+        echo '<p>No content found </p>';
+      endif;
+      ?>
+
+    <div class="post-navigation">
+    <?php previous_post('&laquo; &laquo; %', '', 'yes'); ?>
+| <?php next_post('% &raquo; &raquo; ', '', 'yes'); ?> </div>
+
+  </div>
+
   
 
-	<p><?php the_content(); ?></p>
-    
-  </article>  
-    <?php  endwhile;
-    else : 
-      echo '<p>No content found </p>';
-    endif;
-    ?>
-
-        </div>
-  <?php
-    get_footer();
+<?php
+  get_footer();
 ?>
