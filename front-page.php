@@ -91,7 +91,7 @@ if (!empty($sticky)) {
         <li rel="panel2">Contact</li>
       </ul>
       <div id="panel1" class="panel active">
-        <a href="https://www.google.com/maps/place/kantine+ATTC+%27%2777/@51.507929,5.641242,16z/data=!4m2!3m1!1s0x0:0xccec4b04dc58b3e5?hl=en-US"><img src="img/informatie/google_maps.png" alt="google maps"></a>
+        <a href="https://www.google.com/maps/place/kantine+ATTC+%27%2777/@51.507929,5.641242,16z/data=!4m2!3m1!1s0x0:0xccec4b04dc58b3e5?hl=en-US"><img src="<?php bloginfo('template_url'); ?> /img/informatie/google_maps.png" alt="google maps"></a>
       </div>
       <div id="panel2" class="panel contact">
         <h3>Contact</h3>

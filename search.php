@@ -6,7 +6,7 @@
 
   if (have_posts() ) : ?>
 
-    <h2>Zoekresultaten voor: <?php the_search_query(); ?></h2>
+    <h2 class="search__header">Zoekresultaten voor: <?php the_search_query(); ?></h2>
 
   <?php
     while (have_posts() ) : the_post(); 
@@ -20,6 +20,8 @@
     ?>
 
   </div>
+
+  <?php get_sidebar(); ?>
   <?php
     get_footer();
 ?>

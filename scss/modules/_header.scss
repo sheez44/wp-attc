@@ -47,6 +47,10 @@ header {
 	}
 }
 
+.search header, .single-post header {
+	margin-bottom: 3%;
+}
+
 .header--background {
 	@include responsive(md) {
 		height: 275px;

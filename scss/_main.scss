@@ -22,10 +22,7 @@ body {
 }
 
 .container {
-	width: 60%;
-	@include responsive(1100px) {
-		width: 64%;
-	}
+	width: 64%;
 	@include responsive(md) {
 		width: 100%;
 		float: none;

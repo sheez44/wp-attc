@@ -62,8 +62,8 @@
 
 
 .sticky {
-  background: rgb(160, 205, 255);
-  border: 1px solid red;
+  background: desaturate($bgcolor-light, 30%);
+  border: 1px dashed red;
   .news__title a:link, .news__title a:visited {
     color: red !important;
   }
@@ -83,10 +83,6 @@
   a:visited, a:link {
     color: rgb(33, 101, 192);
   }
-}
-
-.single-post .post {
-  margin: 3% 0 0;
 }
 
 article.post-aside, article.post-link {

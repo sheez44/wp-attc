@@ -34,7 +34,7 @@
 }
 
 %aside-block {
-	background-color: $bgcolor-light;
+	background-color: desaturate($bgcolor-light, 30%);
 	border: $border-default;
 	padding: 9px;
 }

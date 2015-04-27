@@ -35,6 +35,7 @@
   	<p><?php the_content(); ?></p>
       
     </article>  
+
       
       <?php  endwhile;
       else : 
@@ -44,12 +45,15 @@
 
     <div class="post-navigation">
     <?php previous_post('&laquo; &laquo; %', '', 'yes'); ?>
-| <?php next_post('% &raquo; &raquo; ', '', 'yes'); ?> </div>
+|   <?php next_post('% &raquo; &raquo; ', '', 'yes'); ?> </div>
 
-  </div>
 
   
+  </div> <!-- container -->
+
+  <?php get_sidebar(); ?>
 
 <?php
+
   get_footer();
 ?>
