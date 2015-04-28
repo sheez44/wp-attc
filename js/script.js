@@ -1,9 +1,30 @@
 (function ($) {
+
+  console.log("charlswood");
+
+  var $tab = $(".bottom--container").find(".tabs li");
+  
+  $tab.on('click', function() {
+    var $activeTab = $(".tabs").find("li.active");
+
+    $activeTab.removeClass('active');
+    $(this).addClass('active');
+    var panelToShow = $(this).attr('rel');
+
+    $(".tab-panels .panel.active").slideUp(300, function() {
+      $(this).removeClass("active");
+      $("#" + panelToShow).slideDown(300, function() {
+        $(this).addClass("active");
+      });
+    });
+  });
+})(jQuery); 
+
+(function ($) {
    $.getJSON('dates.json', function(data) {
     drawTable(data);
   });
 
-   console.log("works");
   function drawTable(data) {
     for (var i = 0; i < 5; i++) {
       drawRow(data[i]);
@@ -48,6 +69,23 @@
   });
 
 })(jQuery);
+
+(function ($) {
+  $menu = $(".menu-resp");
+   $header = $('header');
+   $nav = $('nav');
+
+   $menu.on('click', function() {
+     if (!$header.hasClass("menuHeight")) {
+       $nav.css("display", "block");
+       $header.addClass("menuHeight");
+     } else {    
+       $header.removeClass("menuHeight");
+       $nav.css("display", "none");
+
+     }
+   });
+})(jQuery); 
 
 (function($) {
 
